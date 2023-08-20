@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Clone</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="chat-window">
+    <div id="chat-container"></div>
+    <input type="text" id="user-input" placeholder="Type a message..." />
+  </div>
+
+  <script>
+    // Get required DOM elements
+    const chatContainer = document.getElementById('chat-container');
+    const userInput = document.getElementById('user-input');
+
+    // Function to create and display a user message
+    function displayUserMessage(message) {
+      const userMessage = document.createElement('div');
+      userMessage.className = 'user-message';
+      userMessage.textContent = message;
+      chatContainer.appendChild(userMessage);
+    }
+
+    // Function to create and display a bot message
+    function displayBotMessage(message) {
+      const botMessage = document.createElement('div');
+      botMessage.className = 'bot-message';
+      botMessage.textContent = message;
+      chatContainer.appendChild(botMessage);
+    }
+
+    // Function to handle user input
+    function handleUserInput() {
+      const message = userInput.value;
+      displayUserMessage(message);
+      // Perform any desired processing or API calls with the user message
+      // Example: Send the user message to a server or API for processing
+      // Receive the response and display it as a bot message
+      const botResponse = 'This is a response from the bot.';
+      displayBotMessage(botResponse);
+      userInput.value = '';
+    }
+
+    // Event listener for user input
+    userInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        handleUserInput();
+      }
+    });
+  </script>
+</body>
+</html>

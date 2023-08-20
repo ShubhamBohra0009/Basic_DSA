@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Replica</title>
+  <style>
+    /* CSS for chat container */
+    .chat-container {
+      border: 1px solid #ccc;
+      height: 400px;
+      width: 400px;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    /* CSS for chat messages */
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .user-message {
+      background-color: #eee;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .assistant-message {
+      background-color: #ddf;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    /* CSS for input area */
+    .input-area {
+      margin-top: 10px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .submit-btn {
+      margin-top: 5px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="message">
+      <span class="user-message">Hello</span>
+    </div>
+    <div class="message">
+      <span class="assistant-message">Hi there! How can I assist you?</span>
+    </div>
+  </div>
+  <div class="input-area">
+    <input type="text" class="input-field" placeholder="Type your message">
+    <button class="submit-btn">Send</button>
+  </div>
+</body>
+</html>
